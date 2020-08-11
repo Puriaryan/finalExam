@@ -1,0 +1,118 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.7" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3"
+			"$columnConstraints": "[fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[][][][][][][][][]"
+		} ) {
+			name: "this"
+			"title": "Loan Projection"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "clientnolabel"
+				"text": "Enter the client number"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "clientNo"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 6 1 8 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "cname"
+				"text": "Enter the client name"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 2"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "clientName"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 6 2 8 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "loanamt"
+				"text": "Enter the customer loan amount"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 3"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "loanAmt"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 6 3 8 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "nyears"
+				"text": "Enter the number of years to pay"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 4"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "nYears"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 6 4 8 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "loantype"
+				"text": "Enter the loan type"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 5"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "loanTypeComboBox"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Business"
+					addElement( "Business" )
+					addElement( "Personal" )
+				}
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 6 5 8 1"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "UserListPanel"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "scrollPane1MouseClicked", true ) )
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "UserListTable"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "UserListTableMouseClicked", true ) )
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 6 6 1"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "AcctDetails"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "scrollPane2MouseClicked", true ) )
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "DetailsTable"
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 6 6 8 1"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "add"
+				"text": "Add"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addActionPerformed", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 8"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "edit"
+				"text": "Edit"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "editActionPerformed", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 8 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "Delete"
+				"text": "Delete"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "DeleteActionPerformed", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 5 8"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 880, 535 )
+			"location": new java.awt.Point( 0, 5 )
+		} )
+	}
+}
